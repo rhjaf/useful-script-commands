@@ -3,11 +3,11 @@
     ```bash
     find . -name '*.c' | xargs wc -l
     ```
-2. Search file $content$
+2. Search file **content**
     ```bash
     grep -Rn "*test*" .
     ```
-3. Search for $filename$
+3. Search for **filename**
     ```bash
     find . -type f -name "*test*"
     ``` 
