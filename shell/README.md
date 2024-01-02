@@ -18,3 +18,7 @@
     dhclient -v eth0
     ifconfig eth0 w.x.y.z
     ```
+5. Free Memory caches:
+    ```bash
+    echo 3 > /proc/sys/vm/drop_caches
+    ```
