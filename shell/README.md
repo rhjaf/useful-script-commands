@@ -22,3 +22,7 @@
     ```bash
     echo 3 > /proc/sys/vm/drop_caches
     ```
+6. Replace specific line with SED:
+   ```bash
+   sed -i '34 s/sum/some/g' Chapter1.txt
+   ```
