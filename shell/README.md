@@ -26,3 +26,7 @@
    ```bash
    sed -i '34 s/sum/some/g' Chapter1.txt
    ```
+7. Search an application logs via Journallog:
+  ```bash
+  journalctl -u collectd --since yesterday -n
+  ```
