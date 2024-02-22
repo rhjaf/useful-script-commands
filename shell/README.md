@@ -27,6 +27,10 @@
    sed -i '34 s/sum/some/g' Chapter1.txt
    ```
 7. Search an application logs via Journallog:
-  ```bash
-  journalctl -u collectd --since yesterday -n
-  ```
+   ```bash
+   journalctl -u collectd --since yesterday -n
+   ```
+8. Set DHCP IP for NIC:
+    ```bash
+    dhclient etho0 -v
+    ```
