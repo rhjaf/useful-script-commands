@@ -34,3 +34,7 @@
     ```bash
     dhclient etho0 -v
     ```
+9. Get Real user, Effective user of a running process:
+    ```bash
+    ps -eo pid,euser,ruser,comm | grep [process_name]
+    ```
