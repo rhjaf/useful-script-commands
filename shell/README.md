@@ -38,3 +38,23 @@
     ```bash
     ps -eo pid,euser,ruser,comm | grep [process_name]
     ```
+10. Connect with a Wireless adapter to a WPA network and get an ip from dhcp 
+    ```bash
+    iwconfig
+    sudo ip link set wlp3s0 up
+    sudo wpa_passphrase WLAN_NAME WLAN_PASSWORD > /etc/wpa_supplicant.conf
+    wpa_supplicant -i wlp3s0 -c /etc/wpa_supplicant.conf -D wext
+    wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant.conf -D wext
+    sudo dhclient wlp3s0
+    iwconfig
+    ```
+12. remove packages
+    ```bash
+    apt-get --purge remove postgresql\*
+    rm -r /etc/postgresql/
+    rm -r /etc/postgresql-common/
+    rm -r /var/lib/postgresql/
+    rm -r /var/log/postgresql/
+    userdel -r postgres
+    groupdel postgres
+    ```
